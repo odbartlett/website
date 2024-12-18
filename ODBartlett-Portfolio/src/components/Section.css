@@ -1,0 +1,133 @@
+
+
+
+/* General container */
+.about-me-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #0c0615; /* Dark background */
+    color: #fff; /* White text */
+  }
+
+
+  /* Cards */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
+  }
+  
+  /* Image Cards */
+  .image-card,
+  .image-overlay-card {
+    position: relative;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .photo-strip {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .photo-strip img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Image with Overlay Text */
+  .overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+  }
+  
+  .overlay-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .overlay-text h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  /* Text Card */
+  .text-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+  }
+  
+  .text-card .highlighted-text {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Ticket Card */
+  .ticket-card {
+    background: linear-gradient(135deg, #5a0be4, #8d2af7);
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ticket-header p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .ticket-header span {
+    font-size: 12px;
+    color: #ddd;
+  }
+  
+  .ticket-icon {
+    font-size: 32px;
+  }
+  
+  .ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .ticket-footer p {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  .ticket-footer strong {
+    font-size: 14px;
+  }

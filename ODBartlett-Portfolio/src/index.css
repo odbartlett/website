@@ -1,0 +1,28 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #F1916D;
+  background-color: #19305C;
+  
+}
+
+body {
+  margin: 10px;
+  padding: 20px 20px;
+}
+
+h1 {
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  text-align: left;
+
+  line-height: 1.1;
+  font-size: calc(5vw + 5vh);
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  
+}
+
+
