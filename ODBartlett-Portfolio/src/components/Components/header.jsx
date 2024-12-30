@@ -1,15 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import "../index.css"
+import "../../index.css"
 
 const headerStyles = {
     container: {
-        position: 'fixed',
+        position: 'absolute',
         top: '0',
         left: '0',
         width: '100%',
-        height: '40px',
-        backgroundColor: '#413B61',
+        height: '60px',
+        borderBottomRadius: '10px',
+        borderColor: '#F1916D',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',

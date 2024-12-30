@@ -4,10 +4,11 @@
 /* General container */
 .about-me-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding: 20px;
-    background-color: #0c0615; /* Dark background */
+    margin-top: 5%;
+    background-color: #03122F; /* Dark background */
     color: #fff; /* White text */
   }
 
@@ -25,6 +26,17 @@
   .image-overlay-card {
     position: relative;
   }
+
+  .image-card {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .image-overlay-card {
+    background-image: url(../../assets/surfing.JPG);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
   
   .image {
     width: 100%;
@@ -32,20 +44,6 @@
     display: block;
   }
   
-  .photo-strip {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .photo-strip img {
-    width: 60px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
   
   /* Image with Overlay Text */
   .overlay-text {
@@ -72,10 +70,11 @@
   /* Text Card */
   .text-card {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    background: #fff;
-    color: #000;
+    background: #F3DADF;
+    color: #03122F;
+    height: 50vh;
   }
   
   .text-card .highlighted-text {
@@ -84,50 +83,50 @@
     padding: 20px;
     text-align: left;
   }
+
+  .hobbies-section {
+    margin-top: 30px;
+    text-align: left;
+
+  }
+  
+  .hobbies-section h2 {
+    font-size: 4vh;
+    margin-bottom: 1vh;
+    text-align: center;
+  }
+  
+  .hobbies-list {
+    margin-left: 20px;
+    padding: 1vh;
+    
+  }
+  
+  .hobbies-list li {
+    font-size: 2.3vh;
+    line-height: 4vh;
+  }
   
   /* Ticket Card */
   .ticket-card {
-    background: linear-gradient(135deg, #5a0be4, #8d2af7);
+    background: #AE7DAC;
     padding: 20px;
-    color: #fff;
+    color: #F3DADF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: auto;
   }
   
   .ticket-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
   }
   
   .ticket-header p {
-    margin: 0;
+    margin: 8px;
     font-size: 24px;
     font-weight: bold;
   }
   
-  .ticket-header span {
-    font-size: 12px;
-    color: #ddd;
-  }
-  
-  .ticket-icon {
-    font-size: 32px;
-  }
-  
-  .ticket-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .ticket-footer p {
-    margin: 0;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-  
-  .ticket-footer strong {
-    font-size: 14px;
-  }
