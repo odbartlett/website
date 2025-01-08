@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css"
 
 //import component
 import Header from './components/Components/header'
@@ -16,10 +17,10 @@ function App() {
     <Header />
     
     <h1>
-      <div className = "h1-special">
+      <div className = 'h1-special-header'>
         I'm Owen.
       </div>
-      Software Engineer, and some other stuff.
+        Computer Science Student, Film Enthusiast, and some other things too
     </h1>
     
     <div className='line'/>
@@ -27,7 +28,7 @@ function App() {
     <div className='section-header'>
       01 About Me
       <div className='section-header-special'>
-        hello.
+        Hey!
       </div>
     </div>
     <AboutMe/>
@@ -35,7 +36,7 @@ function App() {
     <div className='section-header'>
       02 Projects
       <div className='section-header-special'>
-        Some Stuff.
+        Things to Prove I know Stuff:
       </div>
     </div>
     <CardSlider/>

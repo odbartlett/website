@@ -17,12 +17,17 @@ const AboutMe =()=> {
 
           {/* Card 4 - Ticket-Like Travel Card */}
           <div className="card ticket-card">
-            <div className="ticket-header">
+            
               <div>
-                <p>RIJ</p>
-                
+                <p>I am a sophmore computer science student at
+                  Johns Hopkins University. My experience covers a vast
+                  area of expertice, and is characterized by my ability to 
+                  adapt to new challenges and learn new skills quickly. I am
+                  a recruited college athelete for water polo and have worked with
+                  teams of all shapes and sizes.
+                </p>
               </div>
-            </div>
+            
           </div>
     
           {/* Card 3 - Styled Text Card */}

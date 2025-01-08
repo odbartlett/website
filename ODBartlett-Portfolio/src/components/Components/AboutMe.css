@@ -87,7 +87,7 @@
   .hobbies-section {
     margin-top: 30px;
     text-align: left;
-
+    color: #03122F;
   }
   
   .hobbies-section h2 {
@@ -113,20 +113,12 @@
     padding: 20px;
     color: #F3DADF;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     height: auto;
-  }
-  
-  .ticket-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-  }
-  
-  .ticket-header p {
-    margin: 8px;
-    font-size: 24px;
+
+    font-size: 2vw;
     font-weight: bold;
   }
+  
+  
   

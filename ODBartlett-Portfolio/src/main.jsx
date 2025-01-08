@@ -7,6 +7,8 @@ import './index.css';
 import App from './App.jsx';
 import Project1 from './components/Roots/Project1';
 import Project2 from './components/Roots/Project2';
+import Project3 from './components/Roots/Project3';
+import Project4 from './components/Roots/Project4';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,9 +17,11 @@ createRoot(document.getElementById('root')).render(
         {/* Default route for the main app */}
         <Route path="/" element={<App />} />
 
-        {/* Additional route for Project1 */}
-        <Route path="/project1" element={<Project1 />} />
-        <Route path="/project2" element={<Project2 />} />
+        {/* Additional routes for Projects */}
+        <Route path="/chess" element={<Project1 />} />
+        <Route path="/image-manip" element={<Project2 />} />
+        <Route path="/cache-sim" element={<Project3 />} />
+        <Route path="/key-value" element={<Project4 />} />
       </Routes>
     </Router>
   </StrictMode>,

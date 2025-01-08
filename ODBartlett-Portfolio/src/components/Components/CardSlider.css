@@ -2,7 +2,7 @@
 
 #main-slider-container {
     width: 100%;
-    height: 580px;
+    height: 630px;
     margin-top: 5%;
   }
   
@@ -27,14 +27,14 @@
   
   .slider-card{
     width: 320px;
-    height: 550px;
+    height: 600px;
     border-radius: 20px;
     
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   .slider-card-title, .slider-card-description {
@@ -59,7 +59,7 @@
     height: 70%;
     background-color:#F3DADF;
     border-radius: 20px;
-    border-top-right-radius: 20px;
+    background-position: 50%;
   }
   
 

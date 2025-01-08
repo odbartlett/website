@@ -5,9 +5,6 @@
   text-align: center;
 }
 
-.h1-special {
-  color: #F3DADF
-}
 
 .section-header {
   margin-top: 200px;
@@ -22,7 +19,7 @@
 }
 
 .section-header-special {
-  font-size: 8vw;
+  font-size: 7vw;
   color: #F3DADF;
   font-weight: bold;
 }
@@ -33,4 +30,10 @@
   color: #F3DADF;
   background-color: transparent;
   text-align: center;
+}
+
+.h1-special-header {
+  font-size: 9vw;
+  color: #F3DADF;
+  font-weight: bold;
 }

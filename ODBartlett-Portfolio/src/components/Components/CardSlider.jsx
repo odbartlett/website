@@ -3,38 +3,35 @@ import "../../index.css";
 import "./CardSlider.css";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-const CardSlider = (props) => {
+import chessthumbnail from "../../assets/chessthumbnail.png";
+
+const CardSlider = () => {
     const projects = [
         {
-          image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", 
-          title: "Chess",
-          description: "A full C++ implementation with a UI in the terminal ",
-          link: "/project1"
+            image: "https://cdn-icons-png.flaticon.com/512/2620/2620517.png", 
+            title: "Key/Value Store",
+            description: "A distributed key-value storage system with multi-client support.",
+            link: "/key-value"
         },
         {
-            image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-            title: "57hours",
-            description: "Redesigning an adventures booking platform",
-            link: "/project2"
+            image: "https://static.vecteezy.com/system/resources/previews/000/162/591/non_2x/vector-linear-digital-photo-editing-icons.jpg",
+            title: "Image-Manipulation",
+            description: "A photoshopesque program designed to manipulate ppm images",
+            link: "/image-manip"
         },
         {
-            image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", 
-            title: "57hours",
-            description: "Redesigning an adventures booking platform",
-            link: "/project3"
+            image: "https://img.freepik.com/premium-vector/cache-memory-vector-filled-outline-icon-design-illustration_357500-1235.jpg", 
+            title: "Cache Simulator",
+            description: "A cache simulator capable of mimicing the effeciency of different caches",
+            link: "/cache-sim"
         },
         {
-            image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg", 
-            title: "57hours",
-            description: "Redesigning an adventures booking platform",
-            link: "/project4"
+            image: "https://static.vecteezy.com/system/resources/previews/022/208/730/non_2x/chess-pieces-clip-art-isolated-on-transparent-background-vector.jpg", 
+            title: "Chess",
+            description: "A full C++ implementation with a UI in the terminal ",
+            link: "/chess"
         },
-        {
-            image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
-            title: "blob",
-            description: "Redesigning an adventures booking platform",
-            link: "/project5"
-        },
+
     ];
 
     const slideLeft = ()=>{
