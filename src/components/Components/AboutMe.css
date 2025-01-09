@@ -21,15 +21,11 @@
     position: relative;
   }
   
-  /* Image Cards */
-  .image-card,
-  .image-overlay-card {
-    position: relative;
-  }
 
   .image-card {
-    background-position: 50% 50%;
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .image-overlay-card {
@@ -42,6 +38,8 @@
     width: 100%;
     height: auto;
     display: block;
+    max-height: 400px;
+    object-fit: cover;
   }
   
   
@@ -69,12 +67,10 @@
   
   /* Text Card */
   .text-card {
-    display: flex;
-    align-items: left;
-    justify-content: center;
     background: #F3DADF;
     color: #03122F;
-    height: 50vh;
+    padding: 20px;
+    overflow: auto;
   }
   
   .text-card .highlighted-text {
@@ -113,12 +109,35 @@
     padding: 20px;
     color: #F3DADF;
     display: flex;
-    justify-content: space-between;
     height: auto;
-
-    font-size: 2vw;
+    font-size: calc(0.5rem + 0.9vw);
     font-weight: bold;
   }
   
+  @media (max-width: 768px) {
+    .about-me-container {
+      grid-template-columns: 1fr;
+    }
   
+    .ticket-card,
+    .text-card {
+      font-size: 4vw;
+    }
   
+    .hobbies-section h2 {
+      font-size: 5vw;
+    }
+  
+    .hobbies-list li {
+      font-size: 4.5vw;
+      line-height: 6vw;
+    }
+
+    .image-overlay-card {
+      min-height: 600px; /* Ensure visibility on small screens */
+    }
+
+    .ticket-card {
+      font-size: calc(0.9rem + 0.3vw);
+  }
+  }

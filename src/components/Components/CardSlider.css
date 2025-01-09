@@ -90,3 +90,37 @@
     opacity: 1.0;
     transform: scale(1.2);
   }
+
+  @media (max-width: 1024px) {
+    .slider-icon.left,
+    .slider-icon.right {
+        width: 40px;
+        height: 40px;
+        top: -50px;
+    }
+    .slider-icon.right {
+      right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-icon.left,
+    .slider-icon.right {
+        width: 30px;
+        height: 30px;
+        top: -40px;
+    }
+    .slider-icon.right {
+      right: 25px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .slider-icon.left,
+    .slider-icon.right {
+        width: 25px;
+        height: 25px;
+        top: -30px;
+    }
+}

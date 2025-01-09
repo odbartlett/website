@@ -20,7 +20,7 @@ function App() {
       <div className = 'h1-special-header'>
         I'm Owen.
       </div>
-        Computer Science Student, Film Enthusiast, and some other things too
+      CS Student at Johns Hopkins
     </h1>
     
     <div className='line'/>
@@ -36,7 +36,7 @@ function App() {
     <div className='section-header'>
       02 Projects
       <div className='section-header-special'>
-        Things to Prove I know Stuff:
+        Some things I've Built:
       </div>
     </div>
     <CardSlider/>
