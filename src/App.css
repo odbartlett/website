@@ -7,9 +7,8 @@
 
 
 .section-header {
-  margin-top: 200px;
   display: flex;
-  min-height: 100px;
+  min-height: 20px;
   flex-direction: column;
   text-align: left;
   width: 100%;
@@ -23,6 +22,7 @@
   color: #F3DADF;
   font-weight: bold;
 }
+
 .line {
   padding: 0vw 25vw;
   border: 1px solid rgba(255, 255, 255, 0.2);
