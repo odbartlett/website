@@ -3,10 +3,15 @@ import "../../index.css";
 import "./CardSlider.css";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-import chessthumbnail from "../../assets/chessthumbnail.png";
 
 const CardSlider = () => {
     const projects = [
+        {
+            image: "https://www.shutterstock.com/image-vector/falling-bitcoin-gold-coins-icons-600nw-1424998934.jpg", 
+            title: "Crypto Trading Bot",
+            description: "A crypto trading bot that uses a combination of technical analysis and machine learning to make trading decisions",
+            link: "/crypto-trading-bot"
+        }, 
         {
             image: "https://cdn-icons-png.flaticon.com/512/2620/2620517.png", 
             title: "Key/Value Store",
@@ -31,7 +36,12 @@ const CardSlider = () => {
             description: "A full C++ implementation with a UI in the terminal ",
             link: "/chess"
         },
-
+        {
+            title: "Cryptocurrency Trading Platform",
+            description: "A comprehensive trading application interfacing with the Binance exchange API",
+            image: cryptoImage,
+            link: "/project5"
+        },
     ];
 
     const slideLeft = ()=>{
