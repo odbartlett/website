@@ -93,11 +93,3 @@ strong {
 .project-link:hover {
     background-color: #D7745A;
 }
-
-/* Add any specific styles for the crypto trading platform if needed */
-.crypto-chart {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Add any other specific styles needed */

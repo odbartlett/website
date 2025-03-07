@@ -31,7 +31,7 @@ function Project5() {
                         secure communications.
                     </div>
                 
-                    <img src={cryptoImage} alt="Crypto Trading Platform Preview" className="project-image"/>
+                    
 
                     <div className="project-text"> 
                         The platform supports various trading functionalities including market and limit
