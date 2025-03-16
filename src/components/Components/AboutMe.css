@@ -1,6 +1,3 @@
-
-
-
 /* General container */
 .about-me-container {
     display: grid;
@@ -141,3 +138,120 @@
       font-size: calc(0.9rem + 0.3vw);
   }
   }
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem 6rem;
+  min-height: 90vh;
+  margin-top: -50px;
+  width: 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-name {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(
+    90deg,
+    #F1916D, /* Orange/coral */
+    #F3DADF, /* White/light pink */
+    #F1916D, /* Orange/coral again */
+    #F3DADF  /* White/light pink again */
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+.hero-subtitle {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #F1916D; /* Changed from gold to orange */
+}
+
+.hero-description {
+  max-width: 900px;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+  color: #F3DADF; /* Changed from white to light pink/white */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.view-projects-btn, .contact-me-btn {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.view-projects-btn {
+  background-color: #F1916D; /* Changed from gold to orange */
+  color: #03122F; /* Dark background color for contrast */
+  border: 2px solid #F1916D;
+}
+
+.contact-me-btn {
+  background-color: transparent;
+  color: #F1916D; /* Changed from gold to orange */
+  border: 2px solid #F1916D;
+}
+
+.view-projects-btn:hover, .contact-me-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(241, 145, 109, 0.3); /* Changed from gold to orange */
+}
+
+.view-projects-btn span, .contact-me-btn span {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}

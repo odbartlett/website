@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import "./App.css"
 
 //import component
@@ -10,30 +10,28 @@ import Footer from './components/Components/footer'
 
 
 function App() {
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToProjects = () => {
+    projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
-
     <Header />
     
-    <h1>
-      <div className = 'h1-special-header'>
-        I'm Owen.
-      </div>
-      CS Student at Johns Hopkins
-    </h1>
+    {/* Hero Section - replaces both "I'm Owen" and "01 About Me" sections */}
+    <AboutMe 
+      scrollToProjects={scrollToProjects}
+      scrollToContact={scrollToContact}
+    />
     
-    <div className='line'/>
-
-    <div className='section-header'>
-      01 About Me
-      <div className='section-header-special'>
-        Hey!
-      </div>
-    </div>
-    <AboutMe/>
-    
-    <div className='section-header'>
+    <div className='section-header' ref={projectsRef} style={{ borderTop: 'none' }}>
       02 Projects
       <div className='section-header-special'>
         Some things I've Built:
@@ -41,7 +39,7 @@ function App() {
     </div>
     <CardSlider/>
 
-    <div className='section-header'>
+    <div className='section-header' ref={contactRef}>
       03 Contact
       <div className='section-header-special'>
         Reach Me

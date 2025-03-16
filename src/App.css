@@ -13,14 +13,17 @@
   text-align: left;
   width: 100%;
   padding-left: 10px;
-  opacity: 0.7;
-  font-size: 2vw;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #F1916D;
+  opacity: 1;
 }
 
 .section-header-special {
-  font-size: 7vw;
+  font-size: 2.8rem;
+  font-weight: 600;
   color: #F3DADF;
-  font-weight: bold;
+  opacity: 1;
 }
 
 .line {
@@ -36,4 +39,45 @@
   font-size: 9vw;
   color: #F3DADF;
   font-weight: bold;
+}
+
+/* Animation for scroll reveal */
+.scroll-reveal {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Ensure section headers maintain styling */
+.section-header {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #F1916D;
+}
+
+.section-header-special {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #F3DADF;
+}
+
+/* Add more space before the Contact section */
+.section-header[ref="contactRef"], 
+.section-header:nth-of-type(3) {
+  margin-top: 8rem;
+}
+
+/* Keep Projects spacing consistent */
+.section-header[ref="projectsRef"],
+.section-header:nth-of-type(2) {
+  margin-top: 5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 4.5rem;
+  }
+
+  .section-header-special {
+    font-size: 2rem;
+  }
 }
