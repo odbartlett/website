@@ -12,7 +12,7 @@ function AboutMe({ scrollToProjects, scrollToContact }) {
       
       <p className="hero-description">
         A sophmore computer science student whose experience covers a vast
-                  area of expertice, and is characterized by an ability to 
+                  area of expertise, and is characterized by an ability to 
                   adapt to new challenges and learn new skills quickly. 
                   A recruited college athelete for water polo and has worked with
                   teams of all shapes and sizes. Always eager to learn and grow.

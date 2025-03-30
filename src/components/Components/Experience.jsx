@@ -26,9 +26,9 @@ function Experience() {
                 </h4>
                 <div className="experience-description">
                   <p>• Developed and deployed AI-driven chatbot applications using JavaScript, OpenAI API, and Vercel.</p>
-                  <p>• Designed and managed PostgreSQL database storage using Supabase.</p>
+                  <p>• Designed and managed PostgreSQL database storage and authentication using Supabase.</p>
                   <p>• Implemented AI prompting techniques for enhanced chatbot performance.</p>
-                  <p>• Worked within a 3-person engineering team, reporting directly to a Lead Engineer.</p>
+                  <p>• Used git for version control and collaborated with a 3-person engineering team, reporting directly to a Lead Engineer.</p>
                 </div>
                 <div className="experience-skills">
                   <span>JavaScript</span>

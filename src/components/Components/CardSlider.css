@@ -69,58 +69,109 @@
     
   }
 
+  /* Enhanced slider navigation arrows */
   .slider-icon.left, .slider-icon.right {
     position: absolute;
-    top: -60px;
-    right: 60px;
-    opacity: 0.1;
+    top: -70px; /* Moved up slightly */
+    width: 45px; /* Larger size */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8; /* Much higher default opacity */
     color: #03122F;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #F3DADF;
-    box-shadow: 0 4px 8px #413B61;
+    box-shadow: 0 4px 12px rgba(65, 59, 97, 0.5); /* Enhanced shadow */
     cursor: pointer;
-    z-index: 1000; /* Ensures buttons are on top */
-  }
-  
-  .slider-icon.right {
-    right: 15px;
-  }
-  
-  .slider-icon.left:hover, .slider-icon.right:hover {
-    opacity: 1.0;
-    transform: scale(1.2);
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth transition */
+    font-size: 1.5rem; /* Larger icons */
   }
 
+  .slider-icon.left {
+    right: 80px; /* More space between arrows */
+  }
+
+  .slider-icon.right {
+    right: 20px;
+  }
+
+  /* Add a subtle pulsing animation to draw attention */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .slider-icon.left:hover, .slider-icon.right:hover {
+    opacity: 1.0;
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(65, 59, 97, 0.7);
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  /* Add indicator text above arrows for additional clarity */
+  .slider-controls {
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    color: #F3DADF;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* Responsive adjustments */
   @media (max-width: 1024px) {
     .slider-icon.left,
     .slider-icon.right {
-        width: 40px;
-        height: 40px;
-        top: -50px;
-    }
-    .slider-icon.right {
-      right: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .slider-icon.left,
-    .slider-icon.right {
-        width: 30px;
-        height: 30px;
-        top: -40px;
-    }
-    .slider-icon.right {
-      right: 25px;
+      width: 40px;
+      height: 40px;
+      top: -60px;
+      font-size: 1.3rem;
     }
     
-}
+    .slider-icon.left {
+      right: 70px;
+    }
+    
+    .slider-controls {
+      top: -85px;
+    }
+  }
 
-@media (max-width: 480px) {
+  @media (max-width: 768px) {
     .slider-icon.left,
     .slider-icon.right {
-        width: 25px;
-        height: 25px;
-        top: -30px;
+      width: 35px;
+      height: 35px;
+      top: -50px;
+      font-size: 1.2rem;
     }
-}
+    
+    .slider-icon.left {
+      right: 60px;
+    }
+    
+    .slider-controls {
+      top: -75px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slider-icon.left,
+    .slider-icon.right {
+      width: 30px;
+      height: 30px;
+      top: -45px;
+      font-size: 1rem;
+    }
+    
+    .slider-icon.left {
+      right: 50px;
+    }
+    
+    .slider-controls {
+      display: none; /* Hide on very small screens */
+    }
+  }
