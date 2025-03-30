@@ -13,14 +13,14 @@
   text-align: left;
   width: 100%;
   padding-left: 10px;
-  font-size: clamp(3rem, 6vw, 4.5rem); /* Constrain size with clamp */
+  font-size: clamp(3rem, 6vw, 4.5rem); 
   font-weight: 700;
   color: #F1916D;
   opacity: 1;
 }
 
 .section-header-special {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem); /* Constrain size with clamp */
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem); 
   font-weight: 600;
   color: #F3DADF;
   opacity: 1;
