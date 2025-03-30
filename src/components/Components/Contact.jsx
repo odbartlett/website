@@ -26,7 +26,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            odbartlett1@gmail.com
+            Email
           </a>
         </AnimatedSection>
         
