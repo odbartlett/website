@@ -14,7 +14,7 @@ function Project5() {
             <h1>
                 Cryptocurrency Trading Platform
                 <div className="h1-special">
-                    A comprehensive trading application interfacing with the Binance exchange API
+                    A comprehensive trading application interfacing with the Binance exchange API (In Progress)
                 </div>
             </h1>
 
@@ -34,10 +34,8 @@ function Project5() {
                     
 
                     <div className="project-text"> 
-                        The platform supports various trading functionalities including market and limit
-                        orders, automated trading strategies, and portfolio management. Key features
-                        include technical analysis capabilities with indicators like MACD and Bollinger
-                        Bands, real-time market data processing, and risk management systems. The
+                        The platform will eventually support various trading functionalities including market and limit
+                        orders, automated trading strategies, and portfolio management. The
                         application is designed to be extensible, allowing for implementation of custom
                         trading algorithms, backtesting capabilities, and multi-exchange support.
                         Future development plans include enhanced market analysis tools, mobile

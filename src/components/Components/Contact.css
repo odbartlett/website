@@ -1,36 +1,69 @@
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    gap: 20px;
+  padding: 5rem 2rem;
+  background-color: #19305C;
+  color: #F3DADF;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-number {
+  color: #F1916D;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-section {
+  color: #F1916D;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-title {
+  font-size: 8rem;
+  font-weight: 600;
+  color: #F3DADF;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.contact-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-link-box {
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #F3DADF;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 4rem;
   }
   
-  .email-box {
-    padding: 4vw 25vw;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    color: #F3DADF;
-    background-color: transparent;
-    font-size: 4vw;
-    text-align: center;
+  .contact-link-box {
+    padding: 1.5rem;
+    font-size: 1.5rem;
   }
-  
-  .button-group {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .contact-button {
-    padding: 3vw 10vw;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    color: #F3DADF;
-    background-color: transparent;
-    font-size: 3vw;
-    cursor: pointer;
-  }
-  
-  .contact-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+}

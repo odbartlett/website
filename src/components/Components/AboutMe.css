@@ -186,7 +186,7 @@
   font-size: 2.6rem;
   font-weight: 400;
   margin-bottom: 3rem;
-  color: #F1916D; /* Changed from gold to orange */
+  color: #F1916D;
 }
 
 .hero-description {
@@ -194,7 +194,7 @@
   font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 3.5rem;
-  color: #F3DADF; /* Changed from white to light pink/white */
+  color: #F3DADF;
 }
 
 .hero-buttons {
@@ -216,42 +216,89 @@
 }
 
 .view-projects-btn {
-  background-color: #F1916D; /* Changed from gold to orange */
-  color: #03122F; /* Dark background color for contrast */
+  background-color: #F1916D;
+  color: #03122F;
   border: 2px solid #F1916D;
 }
 
 .contact-me-btn {
   background-color: transparent;
-  color: #F1916D; /* Changed from gold to orange */
+  color: #F1916D;
   border: 2px solid #F1916D;
 }
 
 .view-projects-btn:hover, .contact-me-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(241, 145, 109, 0.3); /* Changed from gold to orange */
+  box-shadow: 0 6px 18px rgba(241, 145, 109, 0.3);
 }
 
-.view-projects-btn span, .contact-me-btn span {
-  font-size: 1.4rem;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
+/* Mobile responsive adjustments */
 @media (max-width: 768px) {
+  .hero-section {
+    align-items: flex-start; /* Left align on mobile */
+    text-align: left; /* Left align text on mobile */
+    padding: 2rem 1.5rem 4rem;
+    margin-top: -30px;
+  }
+  
   .hero-name {
-    font-size: 4.5rem;
+    font-size: 4rem; /* Smaller font size on mobile */
+    margin-bottom: 0.5rem;
   }
   
   .hero-subtitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
   
   .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 100%; /* Full width on mobile */
   }
   
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 1rem;
     width: 100%;
-    max-width: 300px;
+  }
+  
+  .view-projects-btn, .contact-me-btn {
+    width: 100%; /* Full width buttons on mobile */
+    justify-content: center; /* Center button text */
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 1rem 3rem;
+  }
+  
+  .hero-name {
+    font-size: 3.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
   }
 }

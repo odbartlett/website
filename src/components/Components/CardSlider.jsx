@@ -6,7 +6,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 const CardSlider = () => {
     const projects = [
         {
-            image: "https://www.shutterstock.com/image-vector/falling-bitcoin-gold-coins-icons-600nw-1424998934.jpg", 
+            image: "https://images.ctfassets.net/q5ulk4bp65r7/5FbQ4oiMCnZMZZ1udW3jYZ/fd738c69fc6508d3286163661713f684/Learn_Illustration_What_is_a_Crypto_Wallet.png?w=768&fm=png", 
             title: "Crypto Trading Bot",
             description: "A comprehensive trading application interfacing with the Binance exchange API",
             link: "/crypto-trading-bot"
