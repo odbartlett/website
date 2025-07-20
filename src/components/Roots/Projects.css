@@ -5,17 +5,28 @@
     text-align: center;
 }
 
+/* Enhanced Typography */
 .h1-special {
     color: #F3DADF;
-    font-size: 24px;
-    margin-top: 10px;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+    padding-left: 0;
 }
 
 strong {
     color: #F3DADF;
-    opacity: 1.5;
+    font-weight: 600;
+    background: linear-gradient(135deg, #F3DADF 0%, #F1916D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
+/* Enhanced Section Header */
 .section-header {
     margin-top: 200px;
     display: flex;
@@ -34,6 +45,7 @@ strong {
     font-weight: bold;
 }
 
+/* Enhanced Line Divider */
 .line {
     padding: 0vw 25vw;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -43,57 +55,185 @@ strong {
     text-align: center;
 }
 
+/* Main Project Container */
 .project-display-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    padding: 0px;
-    margin-top: 30px;
+    padding: 0;
+    margin-top: 3rem;
 }
 
+/* Enhanced Project Content */
 .project-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ensure items are centered */
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 1200px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
 }
 
+/* Enhanced Project Text */
 .project-text {
     flex: 1;
     text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-    padding: 15px 20px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 2rem;
+    margin: 1.5rem 0;
     color: #F3DADF;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(243, 218, 223, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+.project-text:first-child {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+}
+
+.project-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #F3DADF, #F1916D, #F3DADF);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-text:hover::before {
+    transform: scaleX(1);
+}
+
+.project-text:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(243, 218, 223, 0.1);
+    border-color: rgba(243, 218, 223, 0.2);
+}
+
+/* Enhanced Project Image */
 .project-image {
     width: 100%;
-    max-width: 900px; /* Prevent excessive stretching on large screens */
+    max-width: 900px;
     height: auto;
-    border-radius: 12px;
-    margin: 20px 0;
-    object-fit: contain; /* Ensures image maintains aspect ratio */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    margin: 2rem 0;
+    object-fit: contain;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(243, 218, 223, 0.1) 0%, rgba(241, 145, 109, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .project-image:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive adjustments for different screen sizes */
+.project-image:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced Project Link */
+.project-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #F1916D 0%, #D7745A 100%);
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(241, 145, 109, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.project-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-link:hover::before {
+    left: 100%;
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, #D7745A 0%, #C05A42 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(241, 145, 109, 0.4);
+}
+
+/* Enhanced List Styling */
+.project-text ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.project-text li {
+    margin: 0.8rem 0;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.project-text li::before {
+    content: '▸';
+    color: #F1916D;
+    font-weight: bold;
+    position: absolute;
+    left: -1.2rem;
+    top: 0.5rem;
+}
+
+/* Enhanced Paragraph Spacing */
+.project-text p {
+    margin: 1.2rem 0;
+}
+
+/* Responsive Design */
 @media (max-width: 1200px) {
     .project-image {
         max-width: 800px;
+    }
+    
+    .project-text {
+        font-size: 1rem;
+        padding: 1.5rem;
     }
 }
 
@@ -103,54 +243,129 @@ strong {
     }
     
     .project-text {
-        font-size: 18px; /* Fixed size instead of vw units for better readability */
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 1.5rem;
+        line-height: 1.7;
+    }
+    
+    .h1-special {
+        font-size: 1.2rem;
+    }
+    
+    .project-link {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
     .project-image {
-        max-width: 90%; /* Percentage-based for smaller screens */
-        margin: 15px 0;
+        max-width: 90%;
+        margin: 1.5rem 0;
     }
     
     .project-text {
-        font-size: 16px;
-        line-height: 1.4;
-        padding: 10px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .project-text:first-child {
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
     
     .h1-special {
-        font-size: 20px; /* Fixed size instead of vw units */
+        font-size: 1.1rem;
+    }
+    
+    .project-display-container {
+        padding: 0;
+        margin-top: 2rem;
+    }
+    
+    .project-content {
+        padding: 0 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .project-image {
         max-width: 95%;
-        margin: 10px 0;
+        margin: 1rem 0;
+        border-radius: 12px;
     }
     
     .project-text {
-        font-size: 15px;
-        line-height: 1.3;
-        padding: 5px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 1rem;
+        margin: 0.8rem 0;
+    }
+    
+    .project-text:first-child {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-link {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .project-display-container {
+        padding: 0;
+    }
+    
+    .project-content {
+        padding: 0 0.8rem;
     }
 }
 
-.project-link {
-    text-decoration: none;
-    color: #FFFFFF;
-    background-color: #F1916D;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: background-color 0.2s ease;
-    text-align: center; /* Center link text */
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.project-link:hover {
-    background-color: #D7745A;
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to elements */
+.project-text {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.project-image {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.project-link {
+    animation: fadeInUp 0.8s ease-out;
 }
