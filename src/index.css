@@ -1,20 +1,44 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --navy-deep:   #0A1628;
+  --navy-mid:    #19305C;
+  --navy-card:   #162040;
+  --navy-border: rgba(42, 74, 127, 0.5);
+  --coral:       #F1916D;
+  --coral-bright:#FF7A50;
+  --coral-dim:   rgba(241, 145, 109, 0.25);
+  --pink:        #F3DADF;
+  --pink-dim:    rgba(243, 218, 223, 0.55);
+  --green:       #4ADE80;
+  --yellow:      #FBBF24;
+  --red-term:    #F87171;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-heading: 'Syne', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --glow-coral: 0 0 24px rgba(241, 145, 109, 0.25), 0 0 48px rgba(241, 145, 109, 0.1);
+
+  font-family: var(--font-body);
+  line-height: 1.6;
   font-weight: 400;
-  color: #F1916D;
-  background-color: #19305C;
-  
+  color: var(--pink);
+  background-color: var(--navy-deep);
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0px;
-  padding: 20px 20px;
-}
-
-h1 {
-  text-align: left;
-  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--navy-deep);
+  background-image:
+    radial-gradient(circle, rgba(241,145,109,0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+  overflow-x: hidden;
 }
 
 a {
@@ -22,3 +46,7 @@ a {
   color: inherit;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  margin: 0;
+}

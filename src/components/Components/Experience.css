@@ -1,48 +1,47 @@
 .experience-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  color: #F3DADF;
-  background-color: #19305C;
-  margin-left: -2rem;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 0 2rem 2rem;
+  color: var(--pink);
 }
 
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   position: relative;
-  padding-left: 190px;
+  padding-left: 200px;
 }
 
-/* The timeline is now absolutely positioned relative to the list */
+/* Timeline spine */
 .experience-list::before {
   content: '';
   position: absolute;
-  left: 190px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #F1916D;
-  opacity: 0.8;
+  left: 200px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--coral), rgba(241,145,109,0.1));
 }
 
-.experience-item {
-  display: flex;
-  position: relative;
-}
+.experience-item { display: flex; position: relative; }
 
 .experience-date {
   position: absolute;
   left: 0;
-  width: 170px;
+  width: 180px;
   padding-right: 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #F1916D;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--coral);
   text-align: right;
-  margin-left: -190px;
+  margin-left: -200px;
+  line-height: 1.5;
+  padding-top: 0.15rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
 }
 
 .experience-content-wrapper {
@@ -50,180 +49,117 @@
   position: relative;
 }
 
-/* The dot is positioned relative to the item, not the content wrapper */
 .experience-dot {
   position: absolute;
-  left: -7px;
+  left: -8px;
   top: 8px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background-color: #F1916D;
+  background: var(--coral);
+  box-shadow: 0 0 0 3px rgba(241,145,109,0.2), 0 0 12px rgba(241,145,109,0.3);
   z-index: 2;
 }
 
-.experience-content {
-  padding-left: 2rem;
-}
+.experience-content { padding-left: 2rem; }
 
 .experience-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #F3DADF;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pink);
+  margin-bottom: 0.35rem;
   text-align: left;
+  line-height: 1.3;
 }
 
 .experience-company {
-  font-size: 1.3rem;
-  color: #F1916D;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--coral);
+  margin-bottom: 1rem;
   font-weight: 500;
   text-align: left;
 }
 
 .experience-company-link {
-  color: #F1916D;
+  color: var(--coral);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
-.experience-company-link:hover {
-  color: #F3DADF;
-  text-decoration: underline;
-}
+.experience-company-link:hover { opacity: 0.75; text-decoration: underline; }
 
-.experience-description {
-  margin-bottom: 1.5rem;
-}
+.experience-description { margin-bottom: 1.2rem; }
 
 .experience-description p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #F3DADF;
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--pink-dim);
+  margin-bottom: 0.3rem;
   text-align: left;
 }
 
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.5rem;
   justify-content: flex-start;
-  margin-top: 1.5rem;
 }
 
 .experience-skills span {
-  background-color: rgba(241, 145, 109, 0.2);
-  color: #F1916D;
-  font-size: 0.9rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  border: 1px solid rgba(241, 145, 109, 0.4);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--coral);
+  background: var(--coral-dim);
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid rgba(241, 145, 109, 0.25);
+  transition: all 0.2s ease;
 }
 
 .experience-skills span:hover {
-  background-color: rgba(241, 145, 109, 0.4);
-  box-shadow: 0 0 15px rgba(241, 145, 109, 0.6);
-  transform: translateY(-2px);
-  border: 1px solid rgba(241, 145, 109, 0.8);
+  background: rgba(241,145,109,0.35);
+  border-color: rgba(241,145,109,0.7);
+  transform: translateY(-1px);
 }
 
-/* Media queries adjusted for the left shift */
-@media (max-width: 1300px) and (min-width: 993px) {
-  .experience-list {
-    padding-left: 180px;
-  }
-  
-  .experience-list::before {
-    left: 180px;
-  }
-  
-  .experience-date {
-    width: 160px;
-    margin-left: -180px;
-  }
-}
-
-@media (max-width: 992px) and (min-width: 769px) {
-  .experience-list {
-    padding-left: 160px;
-  }
-  
-  .experience-list::before {
-    left: 160px;
-  }
-  
-  .experience-date {
-    width: 140px;
-    margin-left: -160px;
-  }
-  
-  .experience-title {
-    font-size: 1.8rem;
-  }
+/* ── Media ───────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .experience-list { padding-left: 160px; }
+  .experience-list::before { left: 160px; }
+  .experience-date { width: 140px; margin-left: -160px; }
+  .experience-title { font-size: 1.05rem; }
 }
 
 @media (max-width: 768px) {
-  .experience-container {
-    margin-left: 0;
-  }
-  
+  .experience-container { padding: 0 1rem 2rem; }
+
   .experience-list {
     padding-left: 0;
+    gap: 3rem;
   }
-  
-  .experience-list::before {
-    left: 20px;
-  }
-  
+
+  .experience-list::before { left: 14px; }
+
   .experience-item {
     flex-direction: column;
-    padding-left: 40px;
+    padding-left: 36px;
   }
-  
+
   .experience-date {
     position: relative;
-    width: 100%;
+    width: auto;
     text-align: left;
     padding-right: 0;
     margin-left: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
   }
-  
-  .experience-dot {
-    left: -27px;
-  }
-  
-  .experience-content {
-    padding-left: 0;
-  }
-  
-  .experience-title, .experience-company {
-    text-align: left;
-  }
-  
-  .experience-title {
-    font-size: 1.5rem;
-  }
-  
-  .experience-company {
-    font-size: 1.1rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .experience-list::before {
-    left: 15px;
-  }
-  
-  .experience-item {
-    padding-left: 30px;
-  }
-  
-  .experience-dot {
-    left: -22px;
-  }
-} 
+  .experience-dot { left: -29px; top: 6px; }
+  .experience-content { padding-left: 0; }
+  .experience-title { font-size: 1rem; }
+  .experience-company { font-size: 0.88rem; }
+}

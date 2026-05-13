@@ -1,62 +1,49 @@
-import React from "react";
-import { useState } from "react";
-import "../../index.css"
+import React, { useState, useEffect } from "react";
+import "./header.css";
 
-const headerStyles = {
-    container: {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '60px',
-        borderBottomRadius: '10px',
-        borderColor: '#F1916D',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '0 20px 0 0 20px',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        zIndex: '1000'
-    },
+function Header({ scrollToProjects, scrollToExperience, scrollToContact }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    left: {
-        fontSize: '14px',
-        fontWeight: 'bold',
-        paddingLeft: '20px',
-        color: '#F1916D',
-        transition: 'transform 0.3s ease, filter 0.3s ease',
-    },
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-    right: {
-        fontSize: '14px',
-        fontWeight: 'bold',
-        paddingRight: '20px'
-    },
+  const makeNavHandler = (fn) => (e) => {
+    if (fn) { e.preventDefault(); fn(); }
+    setMenuOpen(false);
+  };
 
-    leftHover: {
-        transform: 'scale(1.2)',
-        filter: 'drop-shadow(0 0 0.75em #F1916D)',
-    }
+  return (
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
+      <a href="/" className="header-logo">Owen Bartlett</a>
 
+      <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
+        <a href="/#projects"    onClick={makeNavHandler(scrollToProjects)}>Projects</a>
+        <a href="/#experience"  onClick={makeNavHandler(scrollToExperience)}>Experience</a>
+        <a href="/#contact"     onClick={makeNavHandler(scrollToContact)}>Contact</a>
+        <a
+          href="/OwenBartlett.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="header-resume-btn"
+          onClick={() => setMenuOpen(false)}
+        >
+          Résumé
+        </a>
+      </nav>
+
+      <button
+        className={`hamburger ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(o => !o)}
+        aria-label="Toggle navigation"
+      >
+        <span/><span/><span/>
+      </button>
+    </header>
+  );
 }
 
-
-function Header() {
-    const [isHovered, setIsHovered] = useState(false);
-    return (
-        <div style = {headerStyles.container}>
-            <a href="/">
-            <div style={{...headerStyles.left, ...(isHovered ? headerStyles.leftHover : {}) }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            >
-                Owen Bartlett
-            </div>
-            </a>
-            <div style={headerStyles.right}>
-                odbartlett1@gmail.com
-            </div>
-        </div>
-    );
-}  
 export default Header;

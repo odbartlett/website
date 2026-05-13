@@ -1,69 +1,79 @@
 .contact-container {
-  padding: 5rem 2rem;
-  background-color: #19305C;
-  color: #F3DADF;
+  padding: 3rem 0 6rem;
 }
 
-.contact-header {
-  display: flex;
-  align-items: center;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
 }
 
-.contact-number {
-  color: #F1916D;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.contact-section {
-  color: #F1916D;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.contact-title {
-  font-size: 8rem;
-  font-weight: 600;
-  color: #F3DADF;
-  opacity: 0.8;
-  margin-bottom: 3rem;
-}
-
-.contact-links-container {
+.contact-card {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contact-link-box {
-  display: block;
-  padding: 2rem;
-  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 2.2rem 1.2rem;
   text-align: center;
-  color: #F3DADF;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
 }
 
-.contact-link-box:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+.contact-card:hover {
+  background: rgba(241, 145, 109, 0.08);
+  border-color: rgba(241, 145, 109, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(241, 145, 109, 0.12);
 }
 
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 4rem;
-  }
-  
-  .contact-link-box {
-    padding: 1.5rem;
-    font-size: 1.5rem;
-  }
+.contact-card-highlight {
+  border-color: rgba(241, 145, 109, 0.35);
+  background: rgba(241, 145, 109, 0.06);
+}
+
+.contact-card-highlight:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+}
+
+.contact-card-highlight:hover .contact-card-label,
+.contact-card-highlight:hover .contact-card-sub,
+.contact-card-highlight:hover .contact-card-icon {
+  color: var(--navy-deep);
+}
+
+.contact-card-icon {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--coral);
+  line-height: 1;
+}
+
+.contact-card-label {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.contact-card-sub {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--pink-dim);
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { padding: 1.8rem 1.2rem; }
 }

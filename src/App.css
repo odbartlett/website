@@ -1,126 +1,92 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   text-align: center;
 }
 
-/* Set maximum sizes for headers on all screen sizes */
+/* ── Section headers ─────────────────────────────── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--coral);
+  letter-spacing: 0.1em;
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--coral-dim), transparent);
+  max-width: 200px;
+}
+
 .section-header {
   display: flex;
-  min-height: 20px;
   flex-direction: column;
   text-align: left;
   width: 100%;
-  padding-left: 10px;
-  font-size: clamp(3rem, 6vw, 4.5rem); 
-  font-weight: 700;
-  color: #F1916D;
-  opacity: 1;
+  padding: 4rem 0 0 10px;
 }
 
-.section-header-special {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem); 
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--coral);
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
   font-weight: 600;
-  color: #F3DADF;
-  opacity: 1;
+  color: var(--pink);
+  opacity: 0.8;
+  margin-top: 0.3rem;
 }
 
-.line {
-  padding: 0vw 25vw;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  color: #F3DADF;
-  background-color: transparent;
-  text-align: center;
-}
-
-.h1-special-header {
-  font-size: clamp(3.5rem, 7vw, 6rem); /* Constrain size with clamp */
-  color: #F3DADF;
-  font-weight: bold;
-}
-
-/* Animation for scroll reveal */
+/* ── Scroll reveal ───────────────────────────────── */
 .scroll-reveal {
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
-/* Ensure section headers maintain styling */
-.section-header {
-  font-size: clamp(3rem, 6vw, 4.5rem); /* Consistent constraint */
-  font-weight: 700;
-  color: #F1916D;
+/* ── Shared divider line ─────────────────────────── */
+.line {
+  padding: 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 12%;
 }
 
-.section-header-special {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem); /* Consistent constraint */
-  font-weight: 600;
-  color: #F3DADF;
-}
-
-/* Add more space before the Contact section */
-.section-header[ref="contactRef"], 
-.section-header:nth-of-type(3) {
-  margin-top: 8rem;
-}
-
-/* Keep Projects spacing consistent */
-.section-header[ref="projectsRef"],
-.section-header:nth-of-type(2) {
-  margin-top: 5rem;
-}
-
-/* Media queries for different screen sizes */
-@media (min-width: 1400px) {
-  /* Prevent headers from getting too large on extra large screens */
-  .section-header {
-    font-size: 4.5rem; /* Fixed size for very large screens */
-  }
-  
-  .section-header-special {
-    font-size: 2.2rem; /* Fixed size for very large screens */
-  }
-  
-  .h1-special-header {
-    font-size: 6rem; /* Fixed size for very large screens */
-  }
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .section-header {
-    font-size: 3.5rem;
-  }
-
-  .section-header-special {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-header {
-    font-size: 3rem;
-  }
-
-  .section-header-special {
-    font-size: 1.6rem;
-  }
-  
-  .h1-special-header {
-    font-size: 3.5rem;
-  }
-}
-
-/* Add these classes to your App.css */
+/* ── Contact visibility ──────────────────────────── */
 .visible-content {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 .hidden-content {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+/* ── Media ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  #root { padding: 0 1rem 1rem; }
+  .section-title { font-size: 2.5rem; }
+  .section-subtitle { font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: 2rem; }
+  .section-subtitle { font-size: 1.1rem; }
 }

@@ -1,68 +1,20 @@
 import React from "react";
-import { useState } from "react";
-import "../../index.css"
-
-const headerStyles = {
-    container: {
-        position: 'absolute',
-        left: '0',
-        paddingTop: '10px',
-        width: '100%',
-        height: '80px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    },
-
-    left: {
-        fontSize: '14px',
-        fontWeight: 'bold',
-        paddingLeft: '20px',
-        color: '#F1916D',
-    },
-
-    right: {
-        fontSize: '14px',
-        fontWeight: 'bold',
-        paddingRight: '20px',
-        transition: 'transform 0.3s ease, filter 0.3s ease',
-        cursor: 'pointer',
-    },
-
-    leftHover: {
-        transform: 'scale(1.2)',
-        filter: 'drop-shadow(0 0 0.75em #F1916D)',
-    }
-
-}
-
+import "./footer.css";
 
 function Footer() {
-    const [isHovered, setIsHovered] = useState(false);
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
-    return (
-        <div style = {headerStyles.container}>
-            <div style={headerStyles.left}>
-                Thanks for Visiting!
-            </div>
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-
-            <div style={{...headerStyles.right, ...(isHovered ? headerStyles.leftHover : {}) }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onClick={scrollToTop}
-            > 
-                Back To Top
-            </div>
-            
-        </div>
-    );
-}  
+  return (
+    <footer className="site-footer">
+      <div className="footer-left">
+        <span className="footer-name">Owen Bartlett</span>
+        <span className="footer-copy">© {new Date().getFullYear()} · Built with React & Vite</span>
+      </div>
+      <button className="footer-top-btn" onClick={scrollToTop}>
+        ↑ Back to top
+      </button>
+    </footer>
+  );
+}
 
 export default Footer;
